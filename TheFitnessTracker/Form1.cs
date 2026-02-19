@@ -17,6 +17,24 @@ namespace TheFitnessTracker
             InitializeComponent();
         }
 
-        
+        private void felvitelButton_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void helyszinText_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void importButton_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }
