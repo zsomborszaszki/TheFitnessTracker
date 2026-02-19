@@ -28,121 +28,147 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
+            this.sportagLabel = new System.Windows.Forms.Label();
+            this.idotartamLabel = new System.Windows.Forms.Label();
+            this.datumLabel = new System.Windows.Forms.Label();
+            this.helyszinLabel = new System.Windows.Forms.Label();
+            this.percLabel = new System.Windows.Forms.Label();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.sportagCombo = new System.Windows.Forms.ComboBox();
+            this.idotartamText = new System.Windows.Forms.TextBox();
+            this.datumDateTime = new System.Windows.Forms.DateTimePicker();
+            this.helyszinText = new System.Windows.Forms.TextBox();
+            this.felvitelButton = new System.Windows.Forms.Button();
+            this.importButton = new System.Windows.Forms.Button();
+            this.exportButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // label1
+            // sportagLabel
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(127, 99);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(93, 25);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Sportág:";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
+            this.sportagLabel.AutoSize = true;
+            this.sportagLabel.Location = new System.Drawing.Point(127, 99);
+            this.sportagLabel.Name = "sportagLabel";
+            this.sportagLabel.Size = new System.Drawing.Size(93, 25);
+            this.sportagLabel.TabIndex = 0;
+            this.sportagLabel.Text = "Sportág:";
             // 
-            // label2
+            // idotartamLabel
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(127, 217);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(107, 25);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Időtartam:";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
+            this.idotartamLabel.AutoSize = true;
+            this.idotartamLabel.Location = new System.Drawing.Point(127, 217);
+            this.idotartamLabel.Name = "idotartamLabel";
+            this.idotartamLabel.Size = new System.Drawing.Size(107, 25);
+            this.idotartamLabel.TabIndex = 1;
+            this.idotartamLabel.Text = "Időtartam:";
             // 
-            // label3
+            // datumLabel
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(653, 98);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(80, 25);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "Dátum:";
-            this.label3.Click += new System.EventHandler(this.label3_Click);
+            this.datumLabel.AutoSize = true;
+            this.datumLabel.Location = new System.Drawing.Point(653, 98);
+            this.datumLabel.Name = "datumLabel";
+            this.datumLabel.Size = new System.Drawing.Size(80, 25);
+            this.datumLabel.TabIndex = 2;
+            this.datumLabel.Text = "Dátum:";
             // 
-            // label4
+            // helyszinLabel
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(653, 223);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(100, 25);
-            this.label4.TabIndex = 3;
-            this.label4.Text = "Helyszín:";
-            this.label4.Click += new System.EventHandler(this.label4_Click);
+            this.helyszinLabel.AutoSize = true;
+            this.helyszinLabel.Location = new System.Drawing.Point(653, 223);
+            this.helyszinLabel.Name = "helyszinLabel";
+            this.helyszinLabel.Size = new System.Drawing.Size(100, 25);
+            this.helyszinLabel.TabIndex = 3;
+            this.helyszinLabel.Text = "Helyszín:";
             // 
-            // label5
+            // percLabel
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(383, 220);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(54, 25);
-            this.label5.TabIndex = 4;
-            this.label5.Text = "perc";
+            this.percLabel.AutoSize = true;
+            this.percLabel.Location = new System.Drawing.Point(383, 220);
+            this.percLabel.Name = "percLabel";
+            this.percLabel.Size = new System.Drawing.Size(54, 25);
+            this.percLabel.TabIndex = 4;
+            this.percLabel.Text = "perc";
             // 
-            // comboBox1
+            // sportagCombo
             // 
-            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
+            this.sportagCombo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.sportagCombo.FormattingEnabled = true;
+            this.sportagCombo.Items.AddRange(new object[] {
             "Labdarúgás",
             "Röplabda",
             "Kosárlabda",
             "Asztalitenisz",
             "Kézilabda"});
-            this.comboBox1.Location = new System.Drawing.Point(255, 94);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(182, 33);
-            this.comboBox1.TabIndex = 5;
-            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            this.sportagCombo.Location = new System.Drawing.Point(255, 94);
+            this.sportagCombo.Name = "sportagCombo";
+            this.sportagCombo.Size = new System.Drawing.Size(182, 33);
+            this.sportagCombo.TabIndex = 5;
             // 
-            // textBox1
+            // idotartamText
             // 
-            this.textBox1.Location = new System.Drawing.Point(255, 214);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(122, 31);
-            this.textBox1.TabIndex = 6;
-            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.idotartamText.Location = new System.Drawing.Point(255, 214);
+            this.idotartamText.Name = "idotartamText";
+            this.idotartamText.Size = new System.Drawing.Size(122, 31);
+            this.idotartamText.TabIndex = 6;
             // 
-            // dateTimePicker1
+            // datumDateTime
             // 
-            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker1.Location = new System.Drawing.Point(759, 93);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(212, 31);
-            this.dateTimePicker1.TabIndex = 7;
-            this.dateTimePicker1.ValueChanged += new System.EventHandler(this.dateTimePicker1_ValueChanged);
+            this.datumDateTime.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.datumDateTime.Location = new System.Drawing.Point(759, 93);
+            this.datumDateTime.Name = "datumDateTime";
+            this.datumDateTime.Size = new System.Drawing.Size(212, 31);
+            this.datumDateTime.TabIndex = 7;
             // 
-            // textBox3
+            // helyszinText
             // 
-            this.textBox3.Location = new System.Drawing.Point(759, 217);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(212, 31);
-            this.textBox3.TabIndex = 9;
+            this.helyszinText.Location = new System.Drawing.Point(759, 217);
+            this.helyszinText.Name = "helyszinText";
+            this.helyszinText.Size = new System.Drawing.Size(212, 31);
+            this.helyszinText.TabIndex = 9;
+            // 
+            // felvitelButton
+            // 
+            this.felvitelButton.Location = new System.Drawing.Point(473, 304);
+            this.felvitelButton.Name = "felvitelButton";
+            this.felvitelButton.Size = new System.Drawing.Size(153, 40);
+            this.felvitelButton.TabIndex = 10;
+            this.felvitelButton.Text = "Felvitel";
+            this.felvitelButton.UseVisualStyleBackColor = true;
+            // 
+            // importButton
+            // 
+            this.importButton.Location = new System.Drawing.Point(643, 304);
+            this.importButton.Name = "importButton";
+            this.importButton.Size = new System.Drawing.Size(153, 40);
+            this.importButton.TabIndex = 11;
+            this.importButton.Text = "Import";
+            this.importButton.UseVisualStyleBackColor = true;
+            // 
+            // exportButton
+            // 
+            this.exportButton.Location = new System.Drawing.Point(818, 304);
+            this.exportButton.Name = "exportButton";
+            this.exportButton.Size = new System.Drawing.Size(153, 40);
+            this.exportButton.TabIndex = 12;
+            this.exportButton.Text = "Export";
+            this.exportButton.UseVisualStyleBackColor = true;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1133, 655);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.dateTimePicker1);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.comboBox1);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.exportButton);
+            this.Controls.Add(this.importButton);
+            this.Controls.Add(this.felvitelButton);
+            this.Controls.Add(this.helyszinText);
+            this.Controls.Add(this.datumDateTime);
+            this.Controls.Add(this.idotartamText);
+            this.Controls.Add(this.sportagCombo);
+            this.Controls.Add(this.percLabel);
+            this.Controls.Add(this.helyszinLabel);
+            this.Controls.Add(this.datumLabel);
+            this.Controls.Add(this.idotartamLabel);
+            this.Controls.Add(this.sportagLabel);
             this.Name = "Form1";
             this.Text = "Form1";
             this.ResumeLayout(false);
@@ -152,16 +178,19 @@
 
         #endregion
 
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label sportagLabel;
+        private System.Windows.Forms.Label idotartamLabel;
+        private System.Windows.Forms.Label datumLabel;
+        private System.Windows.Forms.Label helyszinLabel;
+        private System.Windows.Forms.Label percLabel;
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.ComboBox sportagCombo;
+        private System.Windows.Forms.TextBox idotartamText;
+        private System.Windows.Forms.DateTimePicker datumDateTime;
+        private System.Windows.Forms.TextBox helyszinText;
+        private System.Windows.Forms.Button felvitelButton;
+        private System.Windows.Forms.Button importButton;
+        private System.Windows.Forms.Button exportButton;
     }
 }
 

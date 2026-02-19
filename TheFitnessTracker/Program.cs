@@ -33,7 +33,7 @@ namespace TheFitnessTracker
 
             Application.Run(new Form1());
 
-
+            
         }
     }
 }
