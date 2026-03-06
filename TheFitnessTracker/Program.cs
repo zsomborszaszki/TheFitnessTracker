@@ -19,7 +19,7 @@ namespace TheFitnessTracker
             Application.SetCompatibleTextRenderingDefault(false);
 
 
-            string cs = @"server=localhost;userid=root;port=3306;password=;database=test";
+            string cs = @"server=localhost;userid=root;port=3307;password=;database=test";
 
             using (MySqlConnection con = new MySqlConnection(cs))
             {
