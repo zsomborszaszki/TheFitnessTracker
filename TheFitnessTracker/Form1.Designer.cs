@@ -28,11 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
             this.sportagLabel = new System.Windows.Forms.Label();
             this.idotartamLabel = new System.Windows.Forms.Label();
             this.datumLabel = new System.Windows.Forms.Label();
@@ -40,7 +40,6 @@
             this.percLabel = new System.Windows.Forms.Label();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.sportagCombo = new System.Windows.Forms.ComboBox();
-            this.idotartamText = new System.Windows.Forms.TextBox();
             this.datumDateTime = new System.Windows.Forms.DateTimePicker();
             this.helyszinText = new System.Windows.Forms.TextBox();
             this.felvitelButton = new System.Windows.Forms.Button();
@@ -51,7 +50,9 @@
             this.idotartam = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.helyszin = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.datum = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.idotartamNumeric = new System.Windows.Forms.NumericUpDown();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.idotartamNumeric)).BeginInit();
             this.SuspendLayout();
             // 
             // sportagLabel
@@ -120,24 +121,16 @@
             "Asztalitenisz",
             "Kézilabda"});
             this.sportagCombo.Location = new System.Drawing.Point(146, 52);
-            this.sportagCombo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.sportagCombo.Margin = new System.Windows.Forms.Padding(2);
             this.sportagCombo.Name = "sportagCombo";
             this.sportagCombo.Size = new System.Drawing.Size(93, 21);
             this.sportagCombo.TabIndex = 5;
-            // 
-            // idotartamText
-            // 
-            this.idotartamText.Location = new System.Drawing.Point(146, 113);
-            this.idotartamText.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.idotartamText.Name = "idotartamText";
-            this.idotartamText.Size = new System.Drawing.Size(54, 20);
-            this.idotartamText.TabIndex = 6;
             // 
             // datumDateTime
             // 
             this.datumDateTime.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.datumDateTime.Location = new System.Drawing.Point(388, 54);
-            this.datumDateTime.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.datumDateTime.Margin = new System.Windows.Forms.Padding(2);
             this.datumDateTime.Name = "datumDateTime";
             this.datumDateTime.Size = new System.Drawing.Size(108, 20);
             this.datumDateTime.TabIndex = 7;
@@ -145,7 +138,7 @@
             // helyszinText
             // 
             this.helyszinText.Location = new System.Drawing.Point(388, 113);
-            this.helyszinText.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.helyszinText.Margin = new System.Windows.Forms.Padding(2);
             this.helyszinText.Name = "helyszinText";
             this.helyszinText.Size = new System.Drawing.Size(108, 20);
             this.helyszinText.TabIndex = 9;
@@ -158,7 +151,7 @@
             this.felvitelButton.Font = new System.Drawing.Font("Verdana", 10.125F, System.Drawing.FontStyle.Bold);
             this.felvitelButton.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.felvitelButton.Location = new System.Drawing.Point(122, 158);
-            this.felvitelButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.felvitelButton.Margin = new System.Windows.Forms.Padding(2);
             this.felvitelButton.Name = "felvitelButton";
             this.felvitelButton.Size = new System.Drawing.Size(76, 25);
             this.felvitelButton.TabIndex = 10;
@@ -207,17 +200,17 @@
             this.idotartam,
             this.helyszin,
             this.datum});
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Verdana", 7.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopLeft;
+            dataGridViewCellStyle10.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle10.Font = new System.Drawing.Font("Verdana", 7.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            dataGridViewCellStyle10.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle10;
             this.dataGridView1.EnableHeadersVisualStyles = false;
             this.dataGridView1.Location = new System.Drawing.Point(67, 208);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.dataGridView1.RowHeadersVisible = false;
@@ -230,58 +223,72 @@
             // 
             // sportag
             // 
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.sportag.DefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.sportag.DefaultCellStyle = dataGridViewCellStyle6;
             this.sportag.HeaderText = "Sportág";
             this.sportag.MinimumWidth = 10;
             this.sportag.Name = "sportag";
             // 
             // idotartam
             // 
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.idotartam.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.idotartam.DefaultCellStyle = dataGridViewCellStyle7;
             this.idotartam.HeaderText = "Időtartam(perc)";
             this.idotartam.MinimumWidth = 10;
             this.idotartam.Name = "idotartam";
             // 
             // helyszin
             // 
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.helyszin.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.helyszin.DefaultCellStyle = dataGridViewCellStyle8;
             this.helyszin.HeaderText = "Helyszín";
             this.helyszin.MinimumWidth = 10;
             this.helyszin.Name = "helyszin";
             // 
             // datum
             // 
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.datum.DefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.datum.DefaultCellStyle = dataGridViewCellStyle9;
             this.datum.HeaderText = "Dátum";
             this.datum.MinimumWidth = 10;
             this.datum.Name = "datum";
+            // 
+            // idotartamNumeric
+            // 
+            this.idotartamNumeric.Location = new System.Drawing.Point(146, 111);
+            this.idotartamNumeric.Maximum = new decimal(new int[] {
+            300,
+            0,
+            0,
+            0});
+            this.idotartamNumeric.Name = "idotartamNumeric";
+            this.idotartamNumeric.Size = new System.Drawing.Size(52, 20);
+            this.idotartamNumeric.TabIndex = 15;
+            this.idotartamNumeric.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(566, 341);
+            this.ClientSize = new System.Drawing.Size(566, 408);
+            this.Controls.Add(this.idotartamNumeric);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.exportButton);
             this.Controls.Add(this.importButton);
             this.Controls.Add(this.felvitelButton);
             this.Controls.Add(this.helyszinText);
             this.Controls.Add(this.datumDateTime);
-            this.Controls.Add(this.idotartamText);
             this.Controls.Add(this.sportagCombo);
             this.Controls.Add(this.percLabel);
             this.Controls.Add(this.helyszinLabel);
             this.Controls.Add(this.datumLabel);
             this.Controls.Add(this.idotartamLabel);
             this.Controls.Add(this.sportagLabel);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Form1";
             this.Text = "Form1";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.idotartamNumeric)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -296,7 +303,6 @@
         private System.Windows.Forms.Label percLabel;
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
         private System.Windows.Forms.ComboBox sportagCombo;
-        private System.Windows.Forms.TextBox idotartamText;
         private System.Windows.Forms.DateTimePicker datumDateTime;
         private System.Windows.Forms.TextBox helyszinText;
         private System.Windows.Forms.Button felvitelButton;
@@ -307,6 +313,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn idotartam;
         private System.Windows.Forms.DataGridViewTextBoxColumn helyszin;
         private System.Windows.Forms.DataGridViewTextBoxColumn datum;
+        private System.Windows.Forms.NumericUpDown idotartamNumeric;
     }
 }
 

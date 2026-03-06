@@ -17,9 +17,12 @@ namespace TheFitnessTracker
             InitializeComponent();
         }
 
-        private void felvitelButton_Click(object sender, EventArgs e)
+        public void felvitelButton_Click(object sender, EventArgs e)
         {
-
+            string aktSportag = sportagCombo.Text;
+            decimal aktIdotartam = idotartamNumeric.Value;
+            var aktDatum = datumDateTime.Value;
+            var aktHelyszin = helyszinText.Text;
         }
 
         private void helyszinText_TextChanged(object sender, EventArgs e)
