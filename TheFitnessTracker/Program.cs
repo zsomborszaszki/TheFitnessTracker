@@ -21,7 +21,7 @@ namespace TheFitnessTracker
 
 
 
-            string cs = @"server=localhost;userid=root;port=3306;password=;database=test";
+            string cs = @"server=localhost;userid=root;port=3307;password=;database=test";
 
             using (MySqlConnection con = new MySqlConnection(cs))
             {
@@ -29,7 +29,7 @@ namespace TheFitnessTracker
                 var cmd = new MySqlCommand();
                 cmd.Connection = con;
 
-                cmd.CommandText = @"CREATE TABLE IF NOT EXISTS adatok(ID INT AUTO_INCREMENT PRIMARY KEY ,Sportág TEXT, Dátum DateTime, Időtartam INT, Helyszín TEXT)";
+                cmd.CommandText = @"CREATE TABLE IF NOT EXISTS sportTev(ID INT AUTO_INCREMENT PRIMARY KEY ,Sportág TEXT, Dátum DateTime, Időtartam INT, Helyszín TEXT)";
                 cmd.ExecuteNonQuery();
             }
 
