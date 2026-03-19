@@ -9,21 +9,27 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static Microsoft.ApplicationInsights.MetricDimensionNames.TelemetryContext;
 
 namespace TheFitnessTracker
 {
 
     public partial class Form1 : Form
     {
+
+        public bool  ExistsRecord()
+
         public void CsvImport()
         {
             string path = Path.Combine(Application.StartupPath, "import.csv");
 
             string[] lines = File.ReadAllLines(path);
 
-            foreach (string line in lines)
+
+
+            for(int i = 1;i<lines.Length; i++)
             {
-                string[] parts = line.Split(',');
+                string[] parts = lines[i].Split(',');
 
                 string sportag = parts[0];
                 DateTime datum = DateTime.Parse(parts[1]);
