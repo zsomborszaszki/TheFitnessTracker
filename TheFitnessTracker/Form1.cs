@@ -17,7 +17,25 @@ namespace TheFitnessTracker
     public partial class Form1 : Form
     {
 
-        public bool  ExistsRecord()
+        private bool DataExists(string sportag, decimal idotartam, DateTime datum, string helyszin)
+        {
+            string cs = @"server=localhost;userid=root;port=3307;password=;database=test";
+            string query = @"SELECT COUNT(*) FROM sporttev WHERE Sportág = @sportag AND Időtartam = @idotartam AND Dátum = @datum AND Helyszín = @helyszin";
+
+            using (MySqlConnection con = new MySqlConnection(cs))
+            using (MySqlCommand cmd = new MySqlCommand(query, con))
+            {
+                cmd.Parameters.AddWithValue("@sportag", sportag);
+                cmd.Parameters.AddWithValue("@idotartam", idotartam);
+                cmd.Parameters.AddWithValue("@datum", datum);
+                cmd.Parameters.AddWithValue("@helyszin", helyszin);
+
+                con.Open();
+                int count = Convert.ToInt32(cmd.ExecuteScalar());
+
+                return count > 0;
+            }
+        }
 
         public void CsvImport()
         {
@@ -36,7 +54,10 @@ namespace TheFitnessTracker
                 decimal idotartam = decimal.Parse(parts[2]);
                 string helyszin = parts[3];
 
-                InsertDatas(sportag, idotartam, datum, helyszin);
+                if (!DataExists(sportag, idotartam, datum, helyszin))
+                {
+                    InsertDatas(sportag, idotartam, datum, helyszin);
+                }
             }
 
             MessageBox.Show("Az Importálás Befejeződött!");
